@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+
+    <title>Contato</title>
+
+    <link rel="shortcut icon" href="img/cidade.png">
+
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/contato.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;500&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <header class="navbar">
+
+        <nav>
+            <a class="logo" href="/index.html">Guia da cidade</a>
+
+            <ul class="nav-list">
+                <li><a href="/index.html">Início</a></li>
+                <li><a href="/sobre.html">Sobre</a></li>
+                <li><a href="/contato.html">Contato</a></li>
+            </ul>
+
+        </nav>
+
+    </header>
+
+    <div class="row">
+        <form class="card">
+            <label for="inputNome" required>Nome</label>
+            <input type="text" id="inputNome">
+
+            <label for="inputEmail" required>E-mail</label>
+            <input type="email" id="inputEmail">
+
+            <label for="textareaMensagem">Mensagem</label>
+            <textarea name="textareaMensagem" id="textareaMensagem" required></textarea>
+
+            <button onclick="exibeDados()">Enviar mensagem</button>
+        </form>
+
+    </div>
+
+    <script>
+
+        function exibeDados(){
+
+            let nome = document.getElementById("inputNome").value;
+            let email = document.getElementById("inputEmail").value;
+            let mensagem = document.getElementById("textareaMensagem").value;
+
+            console.log("nome: " + nome);
+            console.log("email: " + email);
+            console.log("mensagem: " + mensagem);
+
+           alert("Olá, "+nome + "! Enviamos, a partir do e-mail "+ email + ", a seguinte mensagem: " + mensagem);
+            
+        }
+
+
+    </script>
+
+    <footer   footer class="container-rodape">
+        <h1>Guia da Cidade | Construído com informações da Prefeitura de Sobral e da Wikipedia</h1>
+    </footer>
+
+</body>
+
+</html>
